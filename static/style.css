@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f4ff;
+    text-align: center;
+}
+
+header {
+    background: #4436a5;
+    color: white;
+    padding: 25px;
+}
+
+.container {
+    background: white;
+    width: 70%;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #cccccc;
+}
+
+button {
+    background: #4436a5;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #7062d5;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 20px;
+}
+/* Leaderboard Styling */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th {
+    background: #007c91;
+    color: white;
+    padding: 14px;
+}
+
+td {
+    padding: 13px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+tr:hover {
+    background-color: #e0f7fa;
+}
+
+td:first-child {
+    font-weight: bold;
+    color: #007c91;
+}
