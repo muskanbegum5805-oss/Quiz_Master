@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Master</title>
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Quiz Master 🏆</h1>
+    <p>Test Your Knowledge!</p>
+</header>
+
+<div class="container" id="authContainer">
+
+    <!-- Login Form -->
+    <div id="loginForm">
+        <h2>Student Login</h2>
+
+        <input type="email" id="loginEmail"
+        placeholder="Enter your email">
+
+        <br><br>
+
+        <input type="password" id="loginPassword"
+        placeholder="Enter your password">
+
+        <br><br>
+
+        <button onclick="loginStudent()">Login</button>
+
+        <p>Don't have an account?</p>
+        <button onclick="showRegister()">Register Here</button>
+    </div>
+
+    <!-- Registration Form -->
+    <div id="registerForm" hidden>
+        <h2>Student Registration</h2>
+
+        <input type="text" id="registerName"
+        placeholder="Enter your name">
+
+        <br><br>
+
+        <input type="email" id="registerEmail"
+        placeholder="Enter your email">
+
+        <br><br>
+
+        <input type="password" id="registerPassword"
+        placeholder="Create a password">
+
+        <br><br>
+
+        <button onclick="registerStudent()">Register</button>
+
+        <p>Already have an account?</p>
+        <button onclick="showLogin()">Back to Login</button>
+    </div>
+
+</div>
+
+<!-- Quiz Section -->
+<div class="container" id="quizContainer" hidden>
+
+    <h2>Welcome to Quiz Master!</h2>
+    <h3 id="welcomeMessage"></h3>
+
+    <input type="hidden" id="studentName">
+
+    <button onclick="startQuiz()">Start Quiz</button>
+    <button onclick="showLeaderboard()">Leaderboard</button>
+
+    <div id="message"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
