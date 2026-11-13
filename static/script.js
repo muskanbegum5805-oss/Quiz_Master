@@ -81,9 +81,16 @@ function showQuestion() {
 }
 
 function checkAnswer(selectedIndex) {
-    const correctOption = ["A", "B", "C", "D"][selectedIndex];
+    const selectedAnswer = questions[currentQuestion][
+        ["option_a", "option_b", "option_c", "option_d"][selectedIndex]
+    ];
 
-    if (correctOption === questions[currentQuestion].correct_answer) {
+    const correctAnswer = questions[currentQuestion].correct_answer;
+
+    if (
+        selectedAnswer.trim().toLowerCase() ===
+        correctAnswer.trim().toLowerCase()
+    ) {
         score++;
     }
 
@@ -95,8 +102,6 @@ function checkAnswer(selectedIndex) {
         showResult();
     }
 }
-
-async function showResult() {
     const message = document.getElementById("message");
 
     message.innerHTML = `
