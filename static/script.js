@@ -102,6 +102,7 @@ function checkAnswer(selectedIndex) {
         showResult();
     }
 }
+async function showResult() {
     const message = document.getElementById("message");
 
     message.innerHTML = `
